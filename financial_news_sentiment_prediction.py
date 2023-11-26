@@ -24,7 +24,6 @@ def get_sequences(texts):
     print("Vocab Length:", len(tokenizer.word_index) + 1)
 
     max_seq = np.max(list(map(lambda x: len(x), sequences)))
-    print(max_seq)
     sequences = pad_sequences(sequences, maxlen=max_seq, padding="post")
 
     return sequences
@@ -46,6 +45,7 @@ def preprocess_inputs(dataframe):
 
     y = dataframe["Label"].replace(label_map)
 
+
     train_sequences, test_sequences, y_train, y_test = train_test_split(sequences, y, train_size=0.7, shuffle=True, random_state=1)
 
     return train_sequences, test_sequences, y_train, y_test
@@ -55,7 +55,7 @@ def preprocess_inputs(dataframe):
 
 def create_new_model(min_acc_save):
     # Vocal Length
-    input_dimension = 10123
+    input_dimension = 10180
 
     train_sequences, test_sequences, y_train, y_test = preprocess_inputs(data)
 
@@ -67,7 +67,7 @@ def create_new_model(min_acc_save):
         output_dim=128,
         input_length=train_sequences.shape[1]
     )(inputs)
-    x = keras.layers.GRU(256, return_sequences=True, activation="tanh")(x)
+    x = keras.layers.LSTM(256, return_sequences=True, activation="tanh")(x)
     x = keras.layers.Flatten()(x)
     outputs = keras.layers.Dense(3, activation="softmax")(x)
 
@@ -79,7 +79,7 @@ def create_new_model(min_acc_save):
         metrics=['accuracy']
     )
 
-    history = model.fit(
+    model.fit(
         train_sequences,
         y_train,
         validation_split=0.2,
@@ -107,7 +107,7 @@ def create_new_model(min_acc_save):
     return accuracy
 
 
-max_acc = 0.753783
+max_acc = 0
 
 while True:
     acc = create_new_model(max_acc)

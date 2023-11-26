@@ -29,6 +29,7 @@ for ticker, news_table in news_tables.items():
 
     for i, row in enumerate(news_table.findAll("tr")):
         text = row.a.text
+        print(text)
         time = row.td.text.strip()
         if " " in time:
             day = time[:time.find(" ")]
@@ -44,10 +45,10 @@ for ticker, news_table in news_tables.items():
 dataframe = pd.DataFrame(data, columns=['ticker', 'date', 'time', 'text'])
 
 # initialize vader
-vader = SentimentIntensityAnalyzer()
-
-dataframe["compound"] = dataframe["text"].apply(lambda t: vader.polarity_scores(t)["compound"])
-dataframe["date"] = pd.to_datetime(dataframe.date).dt.date
-
-mean_dataframe = dataframe.groupby(["ticker", "date"]).mean()
-print(dataframe)
+# vader = SentimentIntensityAnalyzer()
+#
+# dataframe["compound"] = dataframe["text"].apply(lambda t: vader.polarity_scores(t)["compound"])
+# dataframe["date"] = pd.to_datetime(dataframe.date).dt.date
+#
+# mean_dataframe = dataframe.groupby(["ticker", "date"]).mean()
+# print(dataframe)
