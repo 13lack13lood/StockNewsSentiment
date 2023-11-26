@@ -48,4 +48,6 @@ vader = SentimentIntensityAnalyzer()
 
 dataframe["compound"] = dataframe["text"].apply(lambda t: vader.polarity_scores(t)["compound"])
 dataframe["date"] = pd.to_datetime(dataframe.date).dt.date
-print(dataframe.head())
+
+mean_dataframe = dataframe.groupby(["ticker", "date"]).mean()
+print(dataframe)
