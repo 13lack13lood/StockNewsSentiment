@@ -1,8 +1,6 @@
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
-from datetime import datetime
 
 # URL for news
 finviz_url = "https://finviz.com/quote.ashx?t="
