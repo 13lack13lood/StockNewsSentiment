@@ -1,2 +1,4 @@
-# Stock-Sentiment-Analysis
+# Stock News Sentiment
+
+[**Work in progress**]
  
