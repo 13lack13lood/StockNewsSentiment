@@ -1,6 +1,6 @@
 # Stock News Sentiment
 
-###**[Work in progress]**
+### **[Work in progress]**
 
  Performs sentimental analysis on stock news titles and determines the tone and detects positive or negative sentiment in the text
 
