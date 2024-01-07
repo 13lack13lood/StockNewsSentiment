@@ -8,10 +8,10 @@ from keras.preprocessing.sequence import pad_sequences
 
 from sklearn.model_selection import train_test_split
 
-import tensorflow as tf
 import keras
 
 data = pd.read_csv("all-data.csv", names=["Label", "Text"], encoding="latin-1")
+test_data = pd.read_csv("test_data.csv", names=["Label", "Text"], encoding="latin-1")
 
 
 # Preprocessing for training
@@ -29,7 +29,20 @@ def get_sequences(texts):
     return sequences
 
 
-print(get_sequences(data["Text"]).shape)
+def get_training_data(dataframe):
+    dataframe = dataframe.copy()
+
+    sequences = get_sequences(dataframe["Text"])
+
+    label_map = {
+        "negative": 0,
+        "neutral": 1,
+        "positive": 2
+    }
+
+    y = dataframe["Label"].replace(label_map)
+
+    return sequences, y
 
 
 def preprocess_inputs(dataframe):
@@ -45,7 +58,6 @@ def preprocess_inputs(dataframe):
 
     y = dataframe["Label"].replace(label_map)
 
-
     train_sequences, test_sequences, y_train, y_test = train_test_split(sequences, y, train_size=0.7, shuffle=True, random_state=1)
 
     return train_sequences, test_sequences, y_train, y_test
@@ -55,7 +67,7 @@ def preprocess_inputs(dataframe):
 
 def create_new_model(min_acc_save):
     # Vocal Length
-    input_dimension = 10180
+    input_dimension = 25000
 
     train_sequences, test_sequences, y_train, y_test = preprocess_inputs(data)
 
@@ -67,7 +79,7 @@ def create_new_model(min_acc_save):
         output_dim=128,
         input_length=train_sequences.shape[1]
     )(inputs)
-    x = keras.layers.LSTM(256, return_sequences=True, activation="tanh")(x)
+    x = keras.layers.GRU(256, return_sequences=True, activation="tanh")(x)
     x = keras.layers.Flatten()(x)
     outputs = keras.layers.Dense(3, activation="softmax")(x)
 
@@ -97,7 +109,7 @@ def create_new_model(min_acc_save):
     accuracy = model.evaluate(test_sequences, y_test)[1]
 
     if accuracy > min_acc_save:
-        model.save("model " + str(accuracy))
+        model.save("modelGRU " + str(accuracy))
 
     # Results
     print(accuracy)
@@ -106,12 +118,11 @@ def create_new_model(min_acc_save):
 
     return accuracy
 
+test_sequence, test_y = get_training_data(test_data)
 
-max_acc = 0
+loaded_model = keras.models.load_model("modelGRU74")
 
-while True:
-    acc = create_new_model(max_acc)
+loaded_model.summary()
 
-    if acc > max_acc:
-        max_acc = acc
-
+loss, acc = loaded_model.evaluate(test_sequence, test_y, verbose=2)
+print('Restored model, accuracy: {:5.2f}%'.format(100 * acc))
