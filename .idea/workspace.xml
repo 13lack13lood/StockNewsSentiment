@@ -8,23 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70e7bbef-8609-428a-860c-428f3698ec8a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all-data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c1a8c0359fbde2f6dcb92065b8ffc5e3/300_stock_headlines.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/financial_news_sentiment_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/financial_news_sentiment_prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7412731051445007/fingerprint.pb" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model/fingerprint.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7412731051445007/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model/keras_metadata.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7412731051445007/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7412731051445007/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7412731051445007/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model/variables/variables.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7585969567298889/fingerprint.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7585969567298889/keras_metadata.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7585969567298889/saved_model.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7585969567298889/variables/variables.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model 0.7585969567298889/variables/variables.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentimentAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/sentimentAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelGRU74/fingerprint.pb" beforeDir="false" afterPath="$PROJECT_DIR$/modelGRU/fingerprint.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelGRU74/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/modelGRU/keras_metadata.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelGRU74/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/modelGRU/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelGRU74/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/modelGRU/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelGRU74/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/modelGRU/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelLSTM74/fingerprint.pb" beforeDir="false" afterPath="$PROJECT_DIR$/modelLSTM/fingerprint.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelLSTM74/keras_metadata.pb" beforeDir="false" afterPath="$PROJECT_DIR$/modelLSTM/keras_metadata.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelLSTM74/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/modelLSTM/saved_model.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelLSTM74/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/modelLSTM/variables/variables.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelLSTM74/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/modelLSTM/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentimentAnalysis.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

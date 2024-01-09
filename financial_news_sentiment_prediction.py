@@ -120,7 +120,7 @@ def create_new_model(min_acc_save):
 
 test_sequence, test_y = get_training_data(test_data)
 
-loaded_model = keras.models.load_model("modelGRU74")
+loaded_model = keras.models.load_model("modelGRU")
 
 loaded_model.summary()
 
