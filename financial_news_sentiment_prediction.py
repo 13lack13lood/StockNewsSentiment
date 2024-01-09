@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 import keras
 
 data = pd.read_csv("all-data.csv", names=["Label", "Text"], encoding="latin-1")
-test_data = pd.read_csv("test_data.csv", names=["Label", "Text"], encoding="latin-1")
+# test_data = pd.read_csv("test_data.csv", names=["Label", "Text"], encoding="latin-1")
 
 
 # Preprocessing for training
@@ -118,9 +118,10 @@ def create_new_model(min_acc_save):
 
     return accuracy
 
-test_sequence, test_y = get_training_data(test_data)
 
-loaded_model = keras.models.load_model("modelGRU")
+test_sequence, test_y = get_training_data(data)
+
+loaded_model = keras.models.load_model("trained_model")
 
 loaded_model.summary()
 
