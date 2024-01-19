@@ -10,8 +10,10 @@ from sklearn.model_selection import train_test_split
 
 import keras
 
+import pickle
+
 data = pd.read_csv("all-data.csv", names=["Label", "Text"], encoding="latin-1")
-# test_data = pd.read_csv("test_data.csv", names=["Label", "Text"], encoding="latin-1")
+test_data = pd.read_csv("test_data.csv", names=["Label", "Text"], encoding="latin-1")
 
 
 # Preprocessing for training
@@ -26,13 +28,22 @@ def get_sequences(texts):
     max_seq = np.max(list(map(lambda x: len(x), sequences)))
     sequences = pad_sequences(sequences, maxlen=max_seq, padding="post")
 
+    with open('tokenizer.pickle', 'wb') as handle:
+        pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
     return sequences
 
 
-def get_training_data(dataframe):
+def get_training_data(dataframe, tokenizer, max_seq):
     dataframe = dataframe.copy()
 
-    sequences = get_sequences(dataframe["Text"])
+    sequences = tokenizer.texts_to_sequences(dataframe["Text"])
+
+    # max_seq = np.max(list(map(lambda x: len(x), sequences)))
+    # print(max_seq)
+    sequences = pad_sequences(sequences, maxlen=max_seq, padding="post")
+
+    print(sequences)
 
     label_map = {
         "negative": 0,
@@ -76,7 +87,7 @@ def create_new_model(min_acc_save):
     inputs = keras.Input(shape=(train_sequences.shape[1]))
     x = keras.layers.Embedding(
         input_dim=input_dimension,
-        output_dim=128,
+        output_dim=256,
         input_length=train_sequences.shape[1]
     )(inputs)
     x = keras.layers.GRU(256, return_sequences=True, activation="tanh")(x)
@@ -119,11 +130,23 @@ def create_new_model(min_acc_save):
     return accuracy
 
 
-test_sequence, test_y = get_training_data(data)
+# while True:
+#     create_new_model(0.72)
 
-loaded_model = keras.models.load_model("trained_model")
+# get_sequences()
+
+with open('tokenizer.pickle', 'rb') as handle:
+    tokenizer = pickle.load(handle)
+
+print(len(tokenizer.word_index) + 1)
+
+test_sequence, test_y = get_training_data(test_data, tokenizer, 71)
+
+loaded_model = keras.models.load_model("modelGRU0.73")
 
 loaded_model.summary()
+
+# loaded_model.save("modelGRU.h5")
 
 loss, acc = loaded_model.evaluate(test_sequence, test_y, verbose=2)
 print('Restored model, accuracy: {:5.2f}%'.format(100 * acc))
