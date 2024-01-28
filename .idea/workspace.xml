@@ -8,19 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70e7bbef-8609-428a-860c-428f3698ec8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create_new_model/create_new_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing_model/testing_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all-data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all-data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financial_news_sentiment_prediction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelGRU.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelGRU0.74/fingerprint.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelGRU0.74/keras_metadata.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelGRU0.74/saved_model.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelGRU0.74/variables/variables.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modelGRU0.74/variables/variables.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokenizer.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all-data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/training_data/train_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/training_data/test_dataset_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/training_data/oov_train_dataset.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +38,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2YgpxPbgfpyJmKdE9hfSESw8X6b" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,11 +60,12 @@
       <recent name="C:\Things\Coding things\Random\StockNewsSentiment\trained_model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Bots and other important things\Stock-Sentiment-Analysis\training_data" />
       <recent name="D:\Bots and other important things\Stock-Sentiment-Analysis" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="StockNewsSentiment" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Stock-Sentiment-Analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,7 +78,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="D:\Bots and other important things\Stock-Sentiment-Analysis\StockNewsSentiment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
