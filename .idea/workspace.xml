@@ -8,13 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70e7bbef-8609-428a-860c-428f3698ec8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/create_new_model/create_new_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testing_model/testing_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all-data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/training_data/train_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/training_data/test_dataset_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/training_data/oov_train_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StockNewsSentiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/StockNewsSentiment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +55,7 @@
       <recent name="C:\Things\Coding things\Random\StockNewsSentiment\trained_model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Bots and other important things\Stock-Sentiment-Analysis\trained_model" />
       <recent name="D:\Bots and other important things\Stock-Sentiment-Analysis\training_data" />
       <recent name="D:\Bots and other important things\Stock-Sentiment-Analysis" />
     </key>

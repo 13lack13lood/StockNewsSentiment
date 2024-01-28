@@ -50,6 +50,6 @@ def model_predict(data):
                                                       "neutral" if float(x["Neutral"]) >= max(float(x["Positive"]), float(x["Negative"]))
                                                       else "positive" if float(x["Positive"]) > max(float(x["Neutral"]), float(x["Negative"]))
                                                       else "negative", axis=1)
-    prediction_df.to_csv("output.csv", index=False)
+    prediction_df.to_csv("predictions.csv", index=False)
 
     return prediction_df
