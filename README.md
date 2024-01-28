@@ -19,9 +19,8 @@ with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 ```
 
-
-
 <br/>
+
 ### Technologies Used
 - TensorFlow
 - Numpy
