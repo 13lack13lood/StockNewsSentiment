@@ -25,7 +25,7 @@ prediction_df = model_predict(data)
 
 This will read a csv file and return the dataframe with the softmaxes and the final label. It will also save the dataframe as a csv file in ```predictions.csv```. 
 
-#### Loading the model seperately
+### Loading the model seperately
 
 If you with to load the model manually, please use:
 ```python
