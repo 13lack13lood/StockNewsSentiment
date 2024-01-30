@@ -13,7 +13,7 @@ to download the required libraries for the project.
 
 ### Performing Predictions
 
-To use the model and perform predictions:
+To use the pre-trained model and perform predictions:
 
 ```python
 import pandas as pd
@@ -25,7 +25,7 @@ prediction_df = model_predict(data)
 
 This will read a csv file and return the dataframe with the softmaxes and the final label. It will also save the dataframe as a csv file in ```predictions.csv```. 
 
-#### Loading the model seperately
+### Loading the pre-trained model seperately
 
 If you with to load the model manually, please use:
 ```python
@@ -83,7 +83,7 @@ If you wish to test a model, the functions for that can be found in ```testing_m
 ```python
 import pickle
 
-with open(FILE_PATH/tokenizer.pickle', 'rb') as handle:
+with open('FILE_PATH/tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 test_model(FILE_PATH, tokenizer)
