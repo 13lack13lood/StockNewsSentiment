@@ -7,7 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70e7bbef-8609-428a-860c-428f3698ec8a" name="Changes" comment="" />
+    <list default="true" id="70e7bbef-8609-428a-860c-428f3698ec8a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StockNewsSentiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/StockNewsSentiment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing_model/testing_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing_model/testing_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trained_model/model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/trained_model/model.keras" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

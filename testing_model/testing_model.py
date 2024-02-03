@@ -4,8 +4,6 @@ from keras.preprocessing.sequence import pad_sequences
 
 import keras
 
-import pickle
-
 test_dataset_1 = pd.read_csv("../training_data/test_dataset_1.csv", names=["Label", "Text"], encoding="latin-1")
 test_dataset_2 = pd.read_csv("../training_data/test_dataset_2.csv", names=["Label", "Text"], encoding="latin-1")
 
